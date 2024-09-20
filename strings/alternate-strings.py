@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/merge-strings-alternately
 class Solution(object):
     def merge_alternatively(self, word_1, word_2):
         arr = []
