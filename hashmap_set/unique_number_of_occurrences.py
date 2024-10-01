@@ -6,7 +6,9 @@ class Solution:
         for val in arr:
             occurrences[val] = occurrences[val] + 1 if val in occurrences else 1
 
-
-        counts = iter(occurrences.values())
-        first = next(counts)
-        return all(first == x for x in counts)
+        occurrence_counts = set()
+        for val in occurrences.values():
+            if val in occurrence_counts:
+                return False
+            occurrence_counts.add(val)
+        return True
