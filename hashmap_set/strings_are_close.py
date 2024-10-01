@@ -15,12 +15,10 @@ class Solution:
         if not all(k in word2_occurrences for k in word1_occurrences.keys()) or not all(k in word1_occurrences for k in word2_occurrences.keys()):
             return False
 
-        word1_counts_sorted = list(word1_occurrences.values()).sort()
-        word2_counts_sorted = list(word2_occurrences.values()).sort()
+        word1_counts_sorted = sorted(list(word1_occurrences.values()))
+        word2_counts_sorted = sorted(list(word2_occurrences.values()))
 
         if word1_counts_sorted != word2_counts_sorted:
             return False
 
         return True
-        
-
